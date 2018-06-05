@@ -1,5 +1,4 @@
-
-  <head>
+<head>
 <script type="text/javascript" src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc"></script>
 
 <script type="text/javascript" >
@@ -51,6 +50,7 @@ li a:hover {
           <div class="col-lg-8 col-md-10 mx-auto">
            <div class="site-heading">
               <h1>Admin</h1>
+             
             </div>
           </div>
         </div>
@@ -68,16 +68,15 @@ li a:hover {
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
 
-          <form action="admin.php?action=addPost&amp;id=<?= $data['id'] ?>" method="post" >
-
-    <input type="text" name="titreBillet" id="titreBillet" placeholder="Titre du billet"/>
+          <form action="admin.php?action=changePost" method="post" >
+<input type="hidden" name="idBillet" value="<?= htmlspecialchars($post['id']); ?>"/>
+    <input type="text" name="titreBillet" id="titreBillet" value="<?= htmlspecialchars($post['titre']); ?>"/>
    <br>
    <br>
     <textarea name="contenu">
-    Ecrire ici le contenu du billet...
+   <?= htmlspecialchars($post['contenu']); ?>
 </textarea>
-         
-              <input type="submit" value="Ajouter" id="ajoutbillet"/>
+              <input type="submit" value="Modifier" id="ajoutbillet"/>
                    </form>
                  </div>
                </div>
