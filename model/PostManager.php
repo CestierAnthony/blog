@@ -18,7 +18,7 @@ class PostManager extends Manager
         if ($post) {
             return $post;
         } else{
-            header('Location: view/frontend/404.html');
+            header('Location: http://www.cestier.com/end/view/frontend/404.php');
         }   
     } 
 }
