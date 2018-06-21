@@ -30,15 +30,15 @@ li a:hover {
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
            <div class="site-heading">
-              <h1>Admin</h1>
+              <h1>Administration</h1>
             </div>
           </div>
         </div>
       </div>
     </header>
  <ul id="menu">
-      <li>        <a href="admin.php">Ajouter un article</a></li>
-    <li><a href="admin.php?action=postAdmin">Modérer les articles</a></li>
+      <li>       
+      <li>        <a href="admin.php?action=addpostAdmin">Ajouter un article</a><li><a href="admin.php?action=postAdmin">Modérer les articles</a></li>
    <li> <a href="admin.php?action=commentAdmin">Modérer les commentaires</a></li>
  </ul>
     <!-- Post Content -->

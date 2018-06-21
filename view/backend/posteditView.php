@@ -49,7 +49,7 @@ li a:hover {
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
            <div class="site-heading">
-              <h1>Admin</h1>
+              <h1>Administration</h1>
              
             </div>
           </div>
@@ -57,7 +57,8 @@ li a:hover {
       </div>
     </header>
     <ul id="menu">
-      <li>        <a href="admin.php">Ajouter un article</a></li>
+      <li>        
+      <li>        <a href="admin.php?action=addpostAdmin">Ajouter un article</a></li>
     <li><a href="admin.php?action=postAdmin">Modérer les articles</a></li>
    <li> <a href="admin.php?action=commentAdmin">Modérer les commentaires</a></li>
  </ul>
@@ -71,8 +72,10 @@ li a:hover {
           <form action="admin.php?action=changePost" method="post" >
 <input type="hidden" name="idBillet" value="<?= htmlspecialchars($post['id']); ?>"/>
     <input type="text" name="titreBillet" id="titreBillet" value="<?= htmlspecialchars($post['titre']); ?>"/>
+  <br>
    <br>
-   <br>
+    <input type="text" name="descriptionBillet" id="descriptionBillet" placeholder="Description du billet" maxlength="480" value="<?= htmlspecialchars($post['description']); ?>"/>
+    <br><br>
     <textarea name="contenu">
    <?= htmlspecialchars($post['contenu']); ?>
 </textarea>
